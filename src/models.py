@@ -30,8 +30,6 @@ favorites_table_locations = Table(
 )
 
 
-
-
 class User(db.Model): #representa mi tabla user de mi base de datos
     __tablename__ = 'users'
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -56,6 +54,7 @@ class User(db.Model): #representa mi tabla user de mi base de datos
         }
 
 
+
 class Characters(db.Model):#representa mi tabla personajes de mi base de datos
     __tablename__ = 'characters'
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -78,7 +77,7 @@ class Characters(db.Model):#representa mi tabla personajes de mi base de datos
             "favorite_by":[user.id for user in self.favorite_by]
 
         }
-    
+   
 
 
 class Location(db.Model):#representa mi tabla Lugares de mi base de datos
